@@ -13,6 +13,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.AspNetCore.Http;
+using FromScratchCoreApplication_GLSI_D_E.Areas.Customer.Services;
 
 namespace FromScratchCoreApplication_GLSI_D_E
 {
@@ -35,6 +36,7 @@ namespace FromScratchCoreApplication_GLSI_D_E
                 .AddEntityFrameworkStores<ApplicationDbContext>();
             services.AddControllersWithViews();
             services.AddRazorPages();
+            services.AddScoped<ICategoryServicecs, CategoryService>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

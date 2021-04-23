@@ -78,7 +78,7 @@ namespace FromScratchCoreApplication_GLSI_D_E.Areas.Customer.Controllers
             _db.categories.Remove(cat);
             await _db.SaveChangesAsync();
             return RedirectToAction(nameof(Index));
-            return View();
+            
         }
 
 
